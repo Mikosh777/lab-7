@@ -116,7 +116,7 @@ else:
 #Task 8
 print('Task 8')
 def longest_word_in_file(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read().split()
         longest_word = max(content, key=len)
         return longest_word
@@ -127,7 +127,7 @@ print(f"The longest word in the file is: {longest_word}")
 #Task 9
 print('Task 9')
 def correct_chars_in_file(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read().replace('B', 'J').replace('b', 'j')
         return content
 
@@ -138,7 +138,7 @@ print(corrected_content)
 #Task 10
 print('Task 10')
 def count_a_b_in_file(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read().lower()
         count_a = content.count('а')
         count_b = content.count('б')
